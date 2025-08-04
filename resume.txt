@@ -1,0 +1,80 @@
+Phan Anh Nguyen, MSc in Data Science
+Email: phananh.nguyen.198@gmail.com | Phone: +84 923 544266
+EDUCATION
+University of Northumbria, United Kingdom Sep 2022 – Sep 2023
+MSc. Big Data and Data Science Technology
+Machine Learning, Statistical Analysis, Business Analytics, Visualization, Deep Learning
+University of Huddersfield, United Kingdom Sep 2017 – Jun 2020
+BSc. in Computer Science
+AI, Computational Math, Algorithm, Parallel and Distributed Computing, Big Data
+Chu Van An High School for the Gifted, Hanoi Sep 2013 – Jun 2017
+Class: Chemistry
+PROFESSIONAL EXPERIENCE
+FPT Smart Cloud (FCI)
+Data Analyst, AI Engineer Jan 2025 - Present
+● Designed and implemented data-driven monitoring solutions for AI Agent performance
+through interactive dashboards, tracking key ML/LLM metrics such as token usage, message
+volume, user engagement, conversation topics, and sentiment/emotion classification.
+● Partnered with the product and engineering teams to define scalable system architectures
+for LLM-based applications.
+● Performed statistical analysis and data profiling to curate high-quality training datasets for
+both pre-training and fine-tuning phases, enabling improved model alignment with
+real-world conversational behavior and business objectives.
+ELCOM Technology Communications Corporation
+Data Analyst, Business Intelligence Sep 2020 – June 2022
+1SK- Mobile Gym Shop App Project:
+● Developed automated data pipelines and SQL-based data models to support exploratory
+analysis, feature engineering, and business reporting on sales, customer retention, and gross
+merchandise value (GMV).
+● Built interactive Power BI dashboards to visualize key performance indicators (KPIs),
+uncover marketing and sales trends, and enable data-driven decision-making for business
+stakeholders.
+● Performed ad-hoc data analysis and delivered executive-ready reports to provide actionable
+insights into monthly performance, customer behavior, and campaign effectiveness,
+supporting strategic planning and operational improvements.
+Traffic System (ITS) Project:
+● Collaborated cross-functionally with AI and engineering teams to optimize machine learning
+models for real-time traffic violation detection, reducing inference latency and improving
+system responsiveness for smart transportation monitoring.
+1
+● Integrated legal compliance constraints into model features and rule-based systems,
+working closely with domain experts to ensure regulatory alignment—earning recognition
+from local authorities for accuracy and compliance.
+● Led data-driven communication between stakeholders (BOT Son Hai) and the IT team to
+align technical development with business requirements for a smart traffic solution.
+● Authored technical documentation and delivered stakeholder training to support smooth
+adoption and operational readiness during project handover and acceptance phases.
+DATA SCIENCE PROJECTS
+Customer Segmentation
+● Supervised learning: Utilized boosting tree-based classifiers to model customer behavior
+and personas, applying SHAP for model interpretability and decision tree visualizations to
+translate findings into strategic business actions.
+● Unsupervised learning: Leveraged Principal Component Analysis (PCA) for dimensionality
+reduction and K-means clustering to segment customers into distinct behavioral profiles.
+● Statistical validation: Confirmed dataset suitability through Factor Analysis with Bartlett’s
+test (p < 0.001) and KMO measure (>0.7).
+Credit Default Classification
+● Ensemble modeling: Developed a LightGBM classifier (AUC: 0.75, accuracy: 76%) to predict
+default probability, incorporating feature engineering for improved risk signals.
+● Threshold tuning for profit: Calibrated decision threshold to 0.197 using cost-sensitive
+learning, maximizing net profit to £2.23M while balancing risk exposure.
+● False negative minimization: Reduced Type II errors by 37% through class reweighting,
+directly cutting potential losses by £1.1M annually.
+SKILLS & ADDITIONS
+● Modelling: Sklearn, LightGBM, XGBoosting, Scipy, Tensorflow, Pytorch, Time Series Library.
+● Data Analysis: Pandas, Numpy, Spark, Auto EDA tool (SweetViz,…)
+● Data Visualization: Tableau, Power BI (DAX), Seaborn, Plotly.
+● Database: PostgreSQL, Oracle SQL, BigQuery, Microsoft Azure, AWS.
+● Soft skills: Proficient in communication, collaborative teamwork, stakeholder negotiation,
+and strategic planning.
+Mastering Data Analytics Course (Hanoi) Sep 2023 – Jan 2024
+● Employed descriptive and diagnostic analytics to assess business performance.
+● Developed professional dashboards in Power BI using a systematic approach.
+● Performed EDA with dashboards and supporting analyses.
+Ngo Vinh Coaching 1-on-1 Data Analyst Course (Hanoi) Mar 2024 – Jun 2024
+● Supervised and unsupervised ML via a credit approval prediction project.
+● Core statistics and applied A/B testing techniques in real-world scenarios.
+HONORS & AWARDS
+● University of Northumbria scholarship for potential international students.
+● University of Huddersfield scholarship Recipient with Academic Excellence and Potential.
+2

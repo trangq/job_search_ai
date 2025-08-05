@@ -7,6 +7,15 @@ Sử dụng mô hình `all-MiniLM-L6-v2` để chuyển mô tả và resume thà
 
 ---
 
+## 📸 Giao diện minh họa
+
+### Chọn ngành nghề để crawl:
+![select-category](images/nganhnghe.png)
+
+### Kết quả đề xuất công việc:
+![results](images/ketqua.png)
+
+
 ## Yêu cầu
 
 - Python >= 3.8

@@ -1,32 +1,49 @@
-# resume.py
-
 import pdfplumber
 import os
 
-RESUME_PATH = f"D:/job-search-ai/DataScientist_PhanAnhNguyen.pdf"  # Đường dẫn đến file PDF cần trích xuất
-WORK_DIR = "D:/job-search-ai"  # Thư mục để lưu file resume.txt
+# Thư mục workspace mặc định nằm cùng thư mục file này
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+WORK_DIR = os.path.join(BASE_DIR, "workspace")
 
-def extract_resume_text(RESUME_PATH=RESUME_PATH):
-    # Đọc PDF và trích xuất text
-    with pdfplumber.open(RESUME_PATH) as pdf:
+
+print("BASE_DIR:", BASE_DIR)
+print("WORK_DIR:", WORK_DIR)
+def extract_resume_text(resume_pdf_path, output_dir=WORK_DIR):
+    """
+    Đọc file PDF resume, trích xuất text, lưu ra file txt trong output_dir.
+    
+    Args:
+        resume_pdf_path (str): Đường dẫn file PDF resume.
+        output_dir (str): Thư mục lưu file txt kết quả.
+    
+    Returns:
+        tuple: (resume_text (str), resume_txt_path (str))
+    """
+    os.makedirs(output_dir, exist_ok=True)
+
+    with pdfplumber.open(resume_pdf_path) as pdf:
         resume_text = "\n".join(
             [page.extract_text() for page in pdf.pages if page.extract_text()]
         )
-
-    # In ra 20 dòng đầu tiên
+    
     print("\n📄 20 dòng đầu trong resume:")
     for i, line in enumerate(resume_text.splitlines()[:20], 1):
         print(f"{i:02d}: {line}")
 
-    # Lưu lại vào file .txt
-    os.makedirs(WORK_DIR, exist_ok=True)
-    resume_txt_path = os.path.join(WORK_DIR, "resume.txt")
+    resume_txt_path = os.path.join(output_dir, "resume.txt")
     with open(resume_txt_path, "w", encoding="utf-8") as f:
         f.write(resume_text)
 
     print(f"\n✅ Văn bản hồ sơ đã được lưu tại: {resume_txt_path}")
-    return resume_txt_path
+    return resume_text, resume_txt_path
 
-# Cho phép gọi từ script hoặc import
+
 if __name__ == "__main__":
-    extract_resume_text()
+    import sys
+    if len(sys.argv) > 1:
+        resume_pdf_path = sys.argv[1]
+    else:
+        print("Vui lòng truyền đường dẫn file PDF resume khi chạy script.")
+        sys.exit(1)
+    extract_resume_text(resume_pdf_path)
+    print("Hãy kiểm tra file resume.txt trong thư mục workspace.")

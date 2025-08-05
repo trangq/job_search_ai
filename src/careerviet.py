@@ -1,5 +1,17 @@
+import os
 import scrapy
 from parsel import Selector
+
+# Giả sử bạn muốn lưu vào folder workspace cùng thư mục chứa file spider này
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+# Đường dẫn tới workspace nằm cùng cấp với src
+WORK_DIR = os.path.join(BASE_DIR, "workspace")
+
+print("BASE_DIR:", BASE_DIR)
+print("WORK_DIR:", WORK_DIR)
+# Đảm bảo thư mục workspace tồn tại
+os.makedirs(WORK_DIR, exist_ok=True)
 
 class CareervietSpider(scrapy.Spider):
     name = "careerviet"
@@ -7,7 +19,7 @@ class CareervietSpider(scrapy.Spider):
 
     custom_settings = {
         'FEEDS': {
-            'careerviet.csv': {
+            os.path.join(WORK_DIR, 'careerviet.csv'): {  # Lưu vào workspace/careerviet.csv
                 'format': 'csv',
                 'overwrite': True
             }
@@ -21,7 +33,6 @@ class CareervietSpider(scrapy.Spider):
         self.page_count = 1
 
     def parse(self, response):
-        # ... giữ nguyên phần parse
         for job in response.css("div.job-item"):
             job_url = response.urljoin(job.css("div.title a.job_link::attr(href)").get())
 
@@ -53,3 +64,4 @@ class CareervietSpider(scrapy.Spider):
 
         job_info["description"] = description_text
         yield job_info
+        print(f"Scraped job: {job_info['title']} - {job_info['company']} - {job_info['location']}")
